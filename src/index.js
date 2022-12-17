@@ -6,6 +6,11 @@ const cart = {
     return this.items;
   },
   add(product) {
+    for (let item of this.items) {
+      if (product.name === item.name) {
+        return (item.quantity += 1);
+      }
+    }
     const newProduct = {
       ...product,
       quantity: 1,
@@ -34,10 +39,23 @@ const cart = {
     }
     return total;
   },
-  increaseQuantity(productName) {},
+  increaseQuantity(productName) {
+    const { items } = this;
+    for (let i = 0; i < items.length; i += 1) {
+      const { name } = items[i];
+      if (name === productName) {
+        return (items[i].quantity += 1);
+      }
+    }
+
+    // console.log(productName);
+  },
   decreaseQuantity(productName) {},
 };
 
+cart.add({ name: 'apple', price: 50 });
+cart.add({ name: 'apple', price: 50 });
+cart.add({ name: 'apple', price: 50 });
 cart.add({ name: 'apple', price: 50 });
 cart.add({ name: 'lemon', price: 70 });
 cart.add({ name: 'lemon', price: 70 });
@@ -47,6 +65,10 @@ console.table(cart.items);
 // cart.remove('lemon');
 console.table(cart.items);
 console.log(cart.countTotalPrice());
+cart.increaseQuantity('apple');
+cart.increaseQuantity('apple');
+cart.increaseQuantity('apple');
 
+console.table(cart.items);
 // cart.clear();
 // console.log(cart.items);
