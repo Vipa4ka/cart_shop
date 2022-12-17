@@ -34,8 +34,8 @@ const cart = {
     const { items } = this;
     let total = 0;
     for (let i = 0; i < items.length; i += 1) {
-      const { price } = items[i];
-      total += price;
+      const { price, quantity } = items[i];
+      total += price * quantity;
     }
     return total;
   },
@@ -47,10 +47,21 @@ const cart = {
         return (items[i].quantity += 1);
       }
     }
-
-    // console.log(productName);
   },
-  decreaseQuantity(productName) {},
+  decreaseQuantity(productName) {
+    const { items } = this;
+    for (let i = 0; i < items.length; i += 1) {
+      const { name } = items[i];
+      if (name === productName) {
+        if (items[i].quantity === 1) {
+          items.splice(i, 1);
+          return;
+        }
+
+        return (items[i].quantity -= 1);
+      }
+    }
+  },
 };
 
 cart.add({ name: 'apple', price: 50 });
@@ -61,14 +72,20 @@ cart.add({ name: 'lemon', price: 70 });
 cart.add({ name: 'lemon', price: 70 });
 cart.add({ name: 'cherry', price: 100 });
 // cart.add({ name: 'strawberry', price: 150 });
-console.table(cart.items);
+// console.table(cart.items);
 // cart.remove('lemon');
-console.table(cart.items);
-console.log(cart.countTotalPrice());
+// console.table(cart.items);
+console.log('total', cart.countTotalPrice());
 cart.increaseQuantity('apple');
 cart.increaseQuantity('apple');
 cart.increaseQuantity('apple');
 
 console.table(cart.items);
+
+cart.decreaseQuantity('lemon');
+cart.decreaseQuantity('lemon');
+cart.decreaseQuantity('cherry');
+console.table(cart.items);
+console.log('total', cart.countTotalPrice());
 // cart.clear();
 // console.log(cart.items);
