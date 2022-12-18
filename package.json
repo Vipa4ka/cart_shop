@@ -29,6 +29,8 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "clean-webpack-plugin": "^4.0.0"
+    "clean-webpack-plugin": "^4.0.0",
+    "handlebars-loader": "^1.7.3",
+    "hbs": "^4.2.0"
   }
 }

@@ -1,4 +1,14 @@
-import './css/index.scss';
+import './css/index.css';
+import cardTpl from './templates/cards.hbs';
+import cards from './card.json';
+
+const listCards = renderCards(cards);
+const list = document.querySelector('.js-product');
+list.insertAdjacentHTML('afterbegin', listCards);
+
+function renderCards(img) {
+  return img.map(cardTpl).join('');
+}
 
 const cart = {
   items: [],
