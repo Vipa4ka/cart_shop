@@ -16,18 +16,6 @@ body {
   flex-wrap: wrap;
   margin: 15px;
   list-style: none;
-
-  /* padding: 0;
-  margin: 0; */
-
-  /* max-width: calc(100% - 64px); */
-  /* margin-left: auto; */
-  /* margin-right: auto; */
-  /* display: grid; */
-  /* justify-content: center; */
-  /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  grid-gap: 24px; */
-  /* text-align: center; */
 }
 .block-img {
   display: flex;
@@ -39,15 +27,15 @@ body {
 }
 
 .list-card {
-  width: 18.5%; /* Ширина */
-  float: left; /* Выстраиваем элементы по горизонтали */
+  width: 18.5%;
+  float: left;
   margin: 1% 0 0 2.5%;
   background: #8bc34a3b;
-  border-radius: 5px; /* Радиус скругления */
+  border-radius: 5px;
   padding: 25px;
   align-items: center;
   text-align: center;
 }
 list-card:first-child {
-  margin-left: 0; /* Убираем отступ для первого элемента */
+  margin-left: 0;
 }
