@@ -1,13 +1,14 @@
 import './css/index.css';
-import cardTpl from './templates/cards.hbs';
-import cards from './card.json';
+import './js/renderCard';
 
-const listCards = renderCards(cards);
-const list = document.querySelector('.js-product');
-list.insertAdjacentHTML('afterbegin', listCards);
+const btnBasket = document.querySelectorAll('.card-button');
 
-function renderCards(img) {
-  return img.map(cardTpl).join('');
+btnBasket.forEach(elem => {
+  elem.addEventListener('click', onClickBtnBasket);
+});
+
+function onClickBtnBasket() {
+  console.log('sdfv');
 }
 
 const cart = {
@@ -74,28 +75,29 @@ const cart = {
   },
 };
 
-cart.add({ name: 'apple', price: 50 });
-cart.add({ name: 'apple', price: 50 });
-cart.add({ name: 'apple', price: 50 });
-cart.add({ name: 'apple', price: 50 });
-cart.add({ name: 'lemon', price: 70 });
-cart.add({ name: 'lemon', price: 70 });
-cart.add({ name: 'cherry', price: 100 });
+// cart.add({ name: 'apple', price: 50 });
+// cart.add({ name: 'apple', price: 50 });
+// cart.add({ name: 'apple', price: 50 });
+// cart.add({ name: 'apple', price: 50 });
+// cart.add({ name: 'lemon', price: 70 });
+// cart.add({ name: 'lemon', price: 70 });
+// cart.add({ name: 'cherry', price: 100 });
 // cart.add({ name: 'strawberry', price: 150 });
 // console.table(cart.items);
 // cart.remove('lemon');
 // console.table(cart.items);
-console.log('total', cart.countTotalPrice());
-cart.increaseQuantity('apple');
-cart.increaseQuantity('apple');
-cart.increaseQuantity('apple');
 
-console.table(cart.items);
+// console.log('total', cart.countTotalPrice());
+// cart.increaseQuantity('apple');
+// cart.increaseQuantity('apple');
+// cart.increaseQuantity('apple');
 
-cart.decreaseQuantity('lemon');
-cart.decreaseQuantity('lemon');
-cart.decreaseQuantity('cherry');
-console.table(cart.items);
-console.log('total', cart.countTotalPrice());
+// console.table(cart.items);
+
+// cart.decreaseQuantity('lemon');
+// cart.decreaseQuantity('lemon');
+// cart.decreaseQuantity('cherry');
+// console.table(cart.items);
+// console.log('total', cart.countTotalPrice());
 // cart.clear();
 // console.log(cart.items);

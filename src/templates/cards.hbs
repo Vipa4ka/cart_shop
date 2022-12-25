@@ -6,18 +6,13 @@
     alt='{{name}}'
     class='image-product'
   />
-
   <h2 class='name-product'>{{name}}</h2>
-  <p class='card-price'>
-    1 кг
-    {{price}}грн
+  <p class='card-price'>1 кг
+    <span class='kg'>{{price}}грн</span>
   </p>
 
-  <button class='card__button button'><span>
-      {{! <svg class='basket' role='img' aria-label='basket'>
-        <use href='./images/sprite.svg#sun'></use>
-      </svg> }}
-    </span>
+  <button class='card-button'>
+    <span class='basket'></span>
     В кошик
   </button>
 
