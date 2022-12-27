@@ -1,15 +1,16 @@
 import cart from './cart';
 
-const cardSearch = document.querySelectorAll('.list-card');
+const btnCard = document.querySelectorAll('.card-button');
 
-cardSearch.forEach(elem => {
+btnCard.forEach(elem => {
   elem.addEventListener('click', onclickCard);
 });
 
 function onclickCard(e) {
-  const elementsId = e.currentTarget.getAttribute('id');
-  const elemsName = e.currentTarget.children[1].innerHTML;
-  const elemsPrice = e.currentTarget.children[3].innerHTML;
+  const listCard = e.currentTarget.parentNode;
+  const elementsId = listCard.getAttribute('id');
+  const elemsName = listCard.children[1].innerHTML;
+  const elemsPrice = listCard.children[3].innerHTML;
   cart.add({ name: elemsName, price: elemsPrice, id: elementsId });
-  //   console.log(cart.items);
+  // console.log(cart.items);
 }
