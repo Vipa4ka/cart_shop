@@ -1,29 +1,24 @@
 import cart from './cart';
 import cards from '../card.json';
 import cardBasket from '../templates/cardBasket.hbs';
-const listBasket = renderBasket(cards);
 
-const list = document.querySelector('.js-product');
+const totalSum = document.querySelector('.totalSum');
+const modal = document.querySelector('.modal');
 
-const btnBasket = document.querySelector('.total-basket');
-btnBasket.addEventListener('click', onClickBasket);
+export default function onClickBasket() {
+  // clearSearch();
+  cart.countTotalPrice();
 
-function onClickBasket() {
-  for (let i = 0; i < cart.items.length; i++) {
-    for (let j = 0; j < cards.length; j++) {
-      if (cart.items[i].id === cards[j].id) {
-        list.insertAdjacentHTML('afterbegin', listBasket);
+  modal.insertAdjacentHTML('afterbegin', renderBasket(cart.items));
+  totalSum.insertAdjacentHTML('afterbegin', cart.items.total);
 
-        // console.log(cart.items[i].name, cart.items[i].id);
-      }
-    }
-  }
+  console.log(cart.items.total);
 }
 
 function renderBasket(img) {
-  console.log(cardBasket);
-
-  // return img.map(cardTpl).join('');
+  return img.map(cardBasket).join('');
 }
 
-// console.log(cart.items);
+// function clearSearch() {
+//   list.innerHTML = '';
+// }

@@ -11,6 +11,13 @@ function onclickCard(e) {
   const elementsId = listCard.getAttribute('id');
   const elemsName = listCard.children[1].innerHTML;
   const elemsPrice = listCard.children[3].innerHTML;
-  cart.add({ name: elemsName, price: elemsPrice, id: elementsId });
-  // console.log(cart.items);
+  const elemsImage = listCard.children[0].src;
+
+  cart.add({
+    name: elemsName,
+    price: elemsPrice,
+    id: elementsId,
+    image: elemsImage,
+    total: elemsPrice,
+  });
 }

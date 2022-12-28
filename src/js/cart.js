@@ -6,12 +6,13 @@ const cart = {
   add(product) {
     for (let item of this.items) {
       if (product.name === item.name) {
-        return (item.quantity += 1);
+        return (item.quantity += 1), (item.total = item.quantity * item.price);
       }
     }
     const newProduct = {
       ...product,
       quantity: 1,
+      // total: 0,
     };
 
     this.items.push(newProduct);
@@ -35,7 +36,7 @@ const cart = {
       const { price, quantity } = items[i];
       total += price * quantity;
     }
-    return total;
+    return (items.total = total);
   },
   increaseQuantity(productName) {
     const { items } = this;

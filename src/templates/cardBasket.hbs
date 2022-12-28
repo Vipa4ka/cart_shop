@@ -1,19 +1,26 @@
-<li class='list-card' id='{{id}}'>
+<li class='list-card-basket' id='{{id}}'>
   <img
-    width='280'
-    height='222'
+    width='120'
+    height='100'
     src='{{image}}'
     alt='{{name}}'
-    class='image-product'
+    class='image-product-basket'
   />
-  <h2 class='name-product'>{{name}}</h2>
-  <span class='card-price'>1 кг </span>
-  <span class='kg'>{{price}}</span>
-  <span>грн</span>
+  <h2 class='name-product-basket'>{{name}}</h2>
+  <div class='product-line'>
+    <span class='unit'>кг</span>
+    <span class='unit price-basket'>{{price}}грн</span>
 
-  <button class='card-button'>
-    <span class='basket'></span>
-    В кошик
-  </button>
+    <div class='button-progress'>
+      <span class='minus'>-</span>
+      <span class='quantity'>{{quantity}}</span>
+      <span class='plus'>+</span>
+
+    </div>
+
+    <span class='unit sum-basket'>{{total}} грн</span>
+
+    <button class='remove-cart'></button>
+  </div>
 
 </li>
