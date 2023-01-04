@@ -1,24 +1,15 @@
 import cart from './cart';
-import cards from '../card.json';
 import cardBasket from '../templates/cardBasket.hbs';
+import refs from './get-refs';
 
-const totalSum = document.querySelector('.totalSum');
-const modal = document.querySelector('.modal');
+refs.modalElem.addEventListener('click', onClickBasket);
 
-export default function onClickBasket() {
-  // clearSearch();
+function onClickBasket() {
   cart.countTotalPrice();
-
-  modal.insertAdjacentHTML('afterbegin', renderBasket(cart.items));
-  totalSum.insertAdjacentHTML('afterbegin', cart.items.total);
-
-  console.log(cart.items.total);
+  refs.modalBasket.insertAdjacentHTML('afterbegin', renderBasket(cart.items));
+  refs.totalSum.insertAdjacentHTML('afterbegin', cart.items.total);
 }
 
-function renderBasket(img) {
-  return img.map(cardBasket).join('');
+function renderBasket(cart) {
+  return cart.map(cardBasket).join('');
 }
-
-// function clearSearch() {
-//   list.innerHTML = '';
-// }

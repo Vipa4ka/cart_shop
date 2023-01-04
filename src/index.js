@@ -5,4 +5,5 @@ import './js/renderCard';
 import './js/addProductToCart';
 import './js/totalBasket';
 import './js/modal';
+import './js/productWeigh';
 import cart from './js/cart';

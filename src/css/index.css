@@ -30,7 +30,7 @@ body {
 .list-card {
   width: 18.5%;
   float: left;
-  margin: 1% 0 0 2.5%;
+  margin: 0 0 2.5% 2.5%;
   background: #8bc34a3b;
   border-radius: 5px;
   padding: 25px;
@@ -40,14 +40,9 @@ body {
 list-card:first-child {
   margin-left: 0;
 }
-
-/* .basket {
-  margin-right: 12px;
-  height: 16px;
-  width: 20px;
-  background: no-repeat url('../img/xc.svg');
-} */
-
+.name-product {
+  margin-bottom: 16px;
+}
 .card-button {
   display: flex;
   justify-content: center;
@@ -81,4 +76,8 @@ list-card:first-child {
   height: 48px;
   width: 48px;
   background: no-repeat url('../img/account.svg');
+}
+.price-product {
+  display: inline-flex;
+  margin-bottom: 16px;
 }

@@ -1,8 +1,7 @@
+import refs from './get-refs';
 import cart from './cart';
 
-const btnCard = document.querySelectorAll('.card-button');
-
-btnCard.forEach(elem => {
+refs.btnCard.forEach(elem => {
   elem.addEventListener('click', onclickCard);
 });
 

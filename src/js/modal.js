@@ -1,22 +1,20 @@
-import onClickBasket from './totalBasket';
-
-const modalElem = document.querySelector('.js-open-modal');
-const overlay = document.querySelector('#overlay-modal');
-const modal = document.querySelector('.modal');
-modalElem.addEventListener('click', onOpenModal);
-modal.addEventListener('click', onCloseModal);
-const btnBasket = document.querySelector('.total-basket');
-btnBasket.addEventListener('click', onClickBasket);
+// import onClickBasket from './totalBasket';
+import refs from './get-refs';
+refs.modalElem.addEventListener('click', onOpenModal);
+refs.modal.addEventListener('click', onCloseModal);
+// refs.modalElem.addEventListener('click', onClickBasket);
 
 function onOpenModal(e) {
   e.preventDefault();
-  modalElem.classList.add('active');
-  overlay.classList.add('active');
-  modal.classList.add('active');
+  refs.modalElem.classList.add('active');
+  refs.overlay.classList.add('active');
+  refs.modal.classList.add('active');
 }
 
 function onCloseModal() {
-  modal.classList.remove('active');
-  modalElem.classList.remove('active');
-  overlay.classList.remove('active');
+  refs.modalBasket.innerHTML = '';
+  refs.totalSum.innerHTML = '';
+  refs.modal.classList.remove('active');
+  refs.modalElem.classList.remove('active');
+  refs.overlay.classList.remove('active');
 }
