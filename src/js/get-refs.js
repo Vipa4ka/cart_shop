@@ -6,8 +6,10 @@ const refs = {
   modal: document.querySelector('.modal'),
   modalBasket: document.querySelector('.modal-basket'),
   overlay: document.querySelector('#overlay-modal'),
-  // minusKg: document.querySelector('.minus'),
+  minusKg: document.querySelector('.minus'),
   plusKg: document.querySelector('.plus'),
+
+  modalBtn: document.querySelector('.modal-cross'),
 };
 
 export default refs;
