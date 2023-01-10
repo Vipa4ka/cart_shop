@@ -1,32 +1,42 @@
 import refs from './get-refs';
 import cart from './cart';
 
-// refs.minusKg.addEventListener('click', onMinusWeigh);
-
-// export default function onMinusWeigh(e) {
-//   console.log(e);
-
-//   //   console.log(cart.decreaseQuantity('Огірок'));
-//   //   cart.decreaseQuantity;
+// export default function plusProduct(event) {
+//   const parent = event.target.closest('.list-card-basket');
+//   const subtitle = parent.querySelector('.name-product-basket');
+//   const nameProduct = subtitle.innerHTML;
+//   cart.increaseQuantity(nameProduct);
 // }
 
-//   refs.modalBasket.insertAdjacentHTML('afterbegin', renderBasket(cart.items));
+// refs.body.addEventListener('click', ss);
+// _____________________________
 
-refs.modalBasket.addEventListener('click', event => {
+export default function ss(event) {
   const isButtonMini = event.target.matches('.minus');
-
   if (!isButtonMini) {
     return;
   }
   const parent = event.target.closest('.list-card-basket');
   const subtitle = parent.querySelector('.name-product-basket');
   const nameProduct = subtitle.innerHTML;
-  console.log(nameProduct);
-  // console.log((cart.items[0].quantity = cart.increaseQuantity(nameProduct)));
+  cart.increaseQuantity(nameProduct);
+  // console.log(cart.increaseQuantity(nameProduct));
+}
 
-  //   return (cart.items[0].quantity = cart.increaseQuantity(nameProduct));
+// ______________________________________
+// refs.modalBasket.addEventListener('click', event => {
+//   const isButtonMini = event.target.matches('.minus');
 
-  //   quantity= cart.increaseQuantity(nameProduct);
-  //   console.log(cart.increaseQuantity(nameProduct));
-  return cart.increaseQuantity(nameProduct);
-});
+//   if (!isButtonMini) {
+//     return;
+//   }
+//   const parent = event.target.closest('.list-card-basket');
+//   const subtitle = parent.querySelector('.name-product-basket');
+//   const nameProduct = subtitle.innerHTML;
+
+//   //   quantity= cart.increaseQuantity(nameProduct);
+//   //   console.log(cart.increaseQuantity(nameProduct));
+//   // return cart.increaseQuantity('Огірок');
+
+//   cart.increaseQuantity(nameProduct);
+// });

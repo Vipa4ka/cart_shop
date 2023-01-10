@@ -1,4 +1,5 @@
 const refs = {
+  body: document.querySelector('body'),
   list: document.querySelector('.js-product'),
   totalSum: document.querySelector('.totalSum'),
   btnCard: document.querySelectorAll('.card-button'),
@@ -6,7 +7,7 @@ const refs = {
   modal: document.querySelector('.modal'),
   modalBasket: document.querySelector('.modal-basket'),
   overlay: document.querySelector('#overlay-modal'),
-  minusKg: document.querySelector('.minus'),
+  // minusKg: document.querySelector('.minus'),
   plusKg: document.querySelector('.plus'),
 
   modalBtn: document.querySelector('.modal-cross'),
