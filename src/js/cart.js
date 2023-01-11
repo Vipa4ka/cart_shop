@@ -43,8 +43,9 @@ const cart = {
     for (let i = 0; i < items.length; i += 1) {
       const { name } = items[i];
       if (name === productName) {
-        return (items[i].quantity += 1);
+        items[i].quantity += 1;
       }
+      return this.items;
     }
   },
   decreaseQuantity(productName) {

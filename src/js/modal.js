@@ -1,6 +1,7 @@
 import refs from './get-refs';
 // import plusProduct from './productWeigh';
 import cart from './cart';
+import ss from './productWeigh';
 
 refs.modalElem.addEventListener('click', onOpenModal);
 refs.modalBtn.addEventListener('click', onCloseModal);
