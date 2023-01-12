@@ -13,7 +13,7 @@ const cart = {
     }
     const newProduct = {
       ...product,
-      quantity: 1,
+      // quantity: 1,
       // total: 0,
     };
 
@@ -38,14 +38,14 @@ const cart = {
 
   countTotalPrice() {
     const { items } = this;
-    let total = 0;
+    let totalBasket = 0;
 
     for (let i = 0; i < items.length; i += 1) {
       const { price, quantity } = items[i];
-      total += price * quantity;
+      totalBasket += price * quantity;
     }
 
-    return (items.total = total);
+    return (items.total = totalBasket);
   },
 
   increaseQuantity(productName) {
@@ -67,9 +67,8 @@ const cart = {
       const { name } = items[i];
 
       if (name === productName) {
-        if (items[i].quantity === 1) {
-          items.splice(i, 1);
-          return;
+        if (items[i].quantity === 0) {
+          return (items[i].quantity = 0);
         }
 
         return (items[i].quantity -= 1);

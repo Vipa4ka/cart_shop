@@ -20,19 +20,35 @@ function onClickOnKg(e) {
   const listProd = e.target.closest('.list-card-basket');
   const nameProd = listProd.querySelector('.name-product-basket').innerHTML;
   const quantityProd = listProd.querySelector('.quantity');
+  const sumProd = listProd.querySelector('.sum-basket');
+  const pricePros = listProd.querySelector('.price-basket');
   // const quantityCart = cart.increaseQuantity(nameProd);
-  // quantityProd.innerHTML = quantityCart;
+
+  console.log(pricePros.innerHTML);
+  const quantityCart = cart.increaseQuantity(nameProd);
+  // const sumCartTotal = cart.countTotalPrice();
+
+  sumProd.innerHTML = quantityCart * pricePros.innerHTML;
+  quantityProd.innerHTML = quantityCart;
+
+  console.log(quantityCart);
+  // console.log(sumCartTotal);
+
+  // sumProd.innerHTML = quantityProd.innerHTML * pricePros.innerHTML;
+  // console.log(sumProd.innerHTML);
+  const sum = quantityProd.innerHTML * cart.items[0].price;
+  // console.log(sum);
 
   const isButtonMini = e.target.matches('.minus');
-  console.log('dsfg');
+  // console.log('dsfg');
 
-  if (!isButtonMini) {
-    const quantityCart = cart.increaseQuantity(nameProd);
-    quantityProd.innerHTML = quantityCart;
-  } else {
-    const quantityCartF = cart.decreaseQuantity(nameProd);
-    quantityProd.innerHTML = quantityCartF;
-  }
+  // if (!isButtonMini) {
+  //   const quantityCart = cart.increaseQuantity(nameProd);
+  //   quantityProd.innerHTML = quantityCart;
+  // } else {
+  //   const quantityCartF = cart.decreaseQuantity(nameProd);
+  //   quantityProd.innerHTML = quantityCartF;
+  // }
 }
 
 function renderCards(img) {
