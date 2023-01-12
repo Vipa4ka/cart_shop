@@ -11,8 +11,6 @@ function onclickCard(e) {
   const elemsName = listCard.children[1].innerHTML;
   const elemsPrice = listCard.children[3].innerHTML;
   const elemsImage = listCard.children[0].src;
-  // const elemsQuantity = listCard;
-  // console.log(elemsQuantity);
 
   cart.add({
     name: elemsName,
@@ -21,6 +19,4 @@ function onclickCard(e) {
     image: elemsImage,
     total: elemsPrice,
   });
-
-  // increaseQuantity(nameProduct);
 }

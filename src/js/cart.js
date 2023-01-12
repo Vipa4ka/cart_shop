@@ -1,8 +1,10 @@
 const cart = {
   items: [],
+
   getItems() {
     return this.items;
   },
+
   add(product) {
     for (let item of this.items) {
       if (product.name === item.name) {
@@ -17,41 +19,53 @@ const cart = {
 
     this.items.push(newProduct);
   },
+
   remove(productName) {
     const { items } = this;
+
     for (let i = 0; i < items.length; i += 1) {
       const { name } = items[i];
+
       if (productName === name) {
         items.splice(i, 1);
       }
     }
   },
+
   clear() {
     this.items = [];
   },
+
   countTotalPrice() {
     const { items } = this;
     let total = 0;
+
     for (let i = 0; i < items.length; i += 1) {
       const { price, quantity } = items[i];
       total += price * quantity;
     }
+
     return (items.total = total);
   },
+
   increaseQuantity(productName) {
     const { items } = this;
+
     for (let i = 0; i < items.length; i += 1) {
       const { name } = items[i];
+
       if (name === productName) {
-        items[i].quantity += 1;
+        return (items[i].quantity += 1);
       }
-      return this.items;
     }
   },
+
   decreaseQuantity(productName) {
     const { items } = this;
+
     for (let i = 0; i < items.length; i += 1) {
       const { name } = items[i];
+
       if (name === productName) {
         if (items[i].quantity === 1) {
           items.splice(i, 1);

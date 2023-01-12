@@ -3,13 +3,15 @@
         "id": "1",
         "name": "Томат гілка",
         "image": "http://4.bp.blogspot.com/-W9viW1URzhU/UpWjEElgHjI/AAAAAAAAG1g/OMqkZ2plSJY/s640/2.jpg",
-        "price": 100
+        "price": 100,
+        "quantity": 1
     },
     {
         "id": "2",
         "name": "Картопля біла",
         "image": "https://ros-test.info/images/article/5d3eee44c3e1b.jpg",
-        "price": 12
+        "price": 12,
+        "quantity": 1
     },
     {
         "id": "3",
