@@ -34,17 +34,17 @@ function onClickOnKg(e) {
   const isButtonMini = e.target.matches('.minus');
   // console.log('dsfg');
 
-  if (!isButtonMini) {
-    quantityCart = cart.increaseQuantity(nameProd);
-    quantityProd.innerHTML = quantityCart;
-    sumProd.innerHTML = quantityCart * priceProd.innerHTML;
-    quantityProd.innerHTML = quantityCart;
-    refs.totalSum = cart.countTotalPrice();
-  } else {
-    quantityCart = cart.decreaseQuantity(nameProd);
-    sumProd.innerHTML = quantityCart * priceProd.innerHTML;
-    quantityProd.innerHTML = quantityCart;
-  }
+  // if (!isButtonMini) {
+  //   quantityCart = cart.increaseQuantity(nameProd);
+  //   quantityProd.innerHTML = quantityCart;
+  //   sumProd.innerHTML = quantityCart * priceProd.innerHTML;
+  //   quantityProd.innerHTML = quantityCart;
+  //   refs.totalSum = cart.countTotalPrice();
+  // } else {
+  //   quantityCart = cart.decreaseQuantity(nameProd);
+  //   sumProd.innerHTML = quantityCart * priceProd.innerHTML;
+  //   quantityProd.innerHTML = quantityCart;
+  // }
 }
 
 function renderCards(img) {
