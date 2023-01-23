@@ -12,7 +12,7 @@ function onOpenModal(e) {
 
 function onCloseModal() {
   refs.modalBasket.innerHTML = '';
-  refs.totalSum.innerHTML = '';
+  // refs.totalSum.innerHTML = '';
   refs.modal.classList.remove('active');
   refs.overlay.classList.remove('active');
 }

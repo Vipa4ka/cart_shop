@@ -8,13 +8,16 @@ const cart = {
   add(product) {
     for (let item of this.items) {
       if (product.name === item.name) {
-        return (item.quantity += 1), (item.total = item.quantity * item.price);
+        item.quantity += 1;
+        item.total += item.price;
+
+        return;
       }
     }
     const newProduct = {
       ...product,
-      // quantity: 1,
-      // total: 0,
+      quantity: 1,
+      // total: ,
     };
 
     this.items.push(newProduct);
@@ -45,7 +48,7 @@ const cart = {
       totalBasket += price * quantity;
     }
 
-    return (items.total = totalBasket);
+    return (items.allTotal = totalBasket);
   },
 
   increaseQuantity(productName) {
@@ -55,6 +58,7 @@ const cart = {
       const { name } = items[i];
 
       if (name === productName) {
+        // items[i].total += items[i].price;
         return (items[i].quantity += 1);
       }
     }
@@ -75,6 +79,23 @@ const cart = {
       }
     }
   },
+  // amountProd(productName) {
+  //   const { items } = this;
+
+  //   for (let i = 0; i < items.length; i += 1) {
+  //     const { name } = items[i];
+  //     console.log('name', name);
+  //     console.log('productName', productName);
+
+  //     if (name === productName) {
+  //       console.log('total', items[i].total);
+  //       console.log('quantity', items[i].quantity);
+
+  //       return (items[i].total = items[i].quantity * items[i].price);
+  //     }
+  //   }
+  //   // console.log(items);
+  // },
 };
 
 export default cart;
