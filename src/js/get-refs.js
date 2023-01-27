@@ -9,6 +9,7 @@ const refs = {
   overlay: document.querySelector('#overlay-modal'),
   // minusKg: document.querySelector('.minus'),
   plusKg: document.querySelector('.plus'),
+  remove: document.querySelectorAll('.remove-cart'),
 
   modalBtn: document.querySelector('.modal-cross'),
 };

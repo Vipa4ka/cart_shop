@@ -7,11 +7,10 @@ let quantityCart;
 refs.modalElem.addEventListener('click', onClickBasket);
 
 function onClickBasket(e) {
+  refs.totalSum.innerHTML = cart.countTotalPrice();
   refs.modalBasket.addEventListener('click', onClickOnKg);
-  cart.countTotalPrice();
   const listCards = renderCards(cart.items);
   const list = document.querySelector('.modal-basket');
-
   list.insertAdjacentHTML('afterbegin', listCards);
 }
 
@@ -26,15 +25,12 @@ function onClickOnKg(e) {
 
   if (!isButtonMini) {
     quantityCart = cart.increaseQuantity(nameProd);
-    sumProd.innerHTML = cart.amountProd(nameProd);
-    quantityProd.innerHTML = quantityCart;
-    refs.totalSum = cart.countTotalPrice();
   } else {
     quantityCart = cart.decreaseQuantity(nameProd);
-    cart.amountProd(nameProd);
-    sumProd.innerHTML = cart.amountProd(nameProd);
-    quantityProd.innerHTML = quantityCart;
   }
+  sumProd.innerHTML = cart.amountProd(nameProd);
+  quantityProd.innerHTML = quantityCart;
+  refs.totalSum.innerHTML = cart.countTotalPrice();
 }
 
 function renderCards(arrayCart) {
