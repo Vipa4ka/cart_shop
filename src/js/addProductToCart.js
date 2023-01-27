@@ -6,6 +6,9 @@ refs.btnCard.forEach(elem => {
 });
 
 function onclickCard(e) {
+  e.target.setAttribute('disabled', 'true');
+  e.target.classList.remove('active-button');
+
   const listCard = e.currentTarget.parentNode;
   const elementsId = listCard.getAttribute('id');
   const elemsName = listCard.children[1].innerHTML;

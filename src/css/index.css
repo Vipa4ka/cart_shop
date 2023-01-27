@@ -51,11 +51,15 @@ list-card:first-child {
   padding: 10px 20px;
   margin: 0 auto;
   border-radius: 4px;
+
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.active-button {
   background-color: #dffcc6;
   border: double #1d6c1d;
   color: #1d6c1d;
-  font-size: 18px;
-  cursor: pointer;
 }
 .kg {
   margin-left: 21px;

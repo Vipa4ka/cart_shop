@@ -9,7 +9,6 @@ refs.modalElem.addEventListener('click', onClickBasket);
 function onClickBasket(e) {
   refs.modalBasket.addEventListener('click', onClickOnKg);
   cart.countTotalPrice();
-
   const listCards = renderCards(cart.items);
   const list = document.querySelector('.modal-basket');
 
