@@ -10,6 +10,7 @@ const refs = {
   // minusKg: document.querySelector('.minus'),
   plusKg: document.querySelector('.plus'),
   remove: document.querySelectorAll('.remove-cart'),
+  btnProgress: document.querySelector('.button-progress'),
 
   modalBtn: document.querySelector('.modal-cross'),
 };
