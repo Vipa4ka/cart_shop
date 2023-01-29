@@ -9,9 +9,9 @@ const refs = {
   overlay: document.querySelector('#overlay-modal'),
   // minusKg: document.querySelector('.minus'),
   plusKg: document.querySelector('.plus'),
-  remove: document.querySelectorAll('.remove-cart'),
-  btnProgress: document.querySelector('.button-progress'),
 
+  btnProgress: document.querySelector('.button-progress'),
+  listCard: document.querySelector('.list-card-basket'),
   modalBtn: document.querySelector('.modal-cross'),
 };
 

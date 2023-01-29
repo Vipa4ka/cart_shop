@@ -1,6 +1,7 @@
 import cart from './cart';
 import cardBasket from '../templates/cardBasket.hbs';
 import refs from './get-refs';
+import onRemove from './removeProduct';
 
 let quantityCart;
 
@@ -10,8 +11,11 @@ function onClickBasket(e) {
   refs.totalSum.innerHTML = cart.countTotalPrice();
   const listCards = renderCards(cart.items);
   const list = document.querySelector('.modal-basket');
+  list.innerHTML = '';
   list.insertAdjacentHTML('afterbegin', listCards);
   const btnProg = document.querySelectorAll('.button-progress');
+
+  onRemove();
   btnProg.forEach(elem => {
     elem.addEventListener('click', onClickProgress);
   });
@@ -39,6 +43,13 @@ function onClickProgress(e) {
   refs.totalSum.innerHTML = cart.countTotalPrice();
 }
 
-function renderCards(arrayCart) {
-  return arrayCart.map(cardBasket).join('');
+function renderCards() {
+  return cart.items.map(cardBasket).join('');
 }
+
+const total = {
+  renderCards,
+  onClickBasket,
+};
+
+export default total;
