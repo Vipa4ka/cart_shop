@@ -1,7 +1,7 @@
 import cart from './cart';
 import cardBasket from '../templates/cardBasket.hbs';
 import refs from './get-refs';
-import onRemove from './removeProduct';
+import removeFunctions from './removeProduct';
 
 let quantityCart;
 
@@ -15,7 +15,7 @@ function onClickBasket(e) {
   list.insertAdjacentHTML('afterbegin', listCards);
   const btnProg = document.querySelectorAll('.button-progress');
 
-  onRemove();
+  removeFunctions.onRemove();
   btnProg.forEach(elem => {
     elem.addEventListener('click', onClickProgress);
   });

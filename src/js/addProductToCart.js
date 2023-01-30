@@ -1,11 +1,15 @@
 import refs from './get-refs';
 import cart from './cart';
+import cards from '../card.json';
 
 refs.btnCard.forEach(elem => {
   elem.addEventListener('click', onclickCard);
 });
 
 function onclickCard(e) {
+  // console.log(cart.items);
+  // console.log('cards', cards);
+
   e.target.setAttribute('disabled', 'true');
   e.target.classList.remove('active-button');
 
@@ -22,4 +26,13 @@ function onclickCard(e) {
     image: elemsImage,
     total: elemsPrice,
   });
+
+  // cards.map(card => {
+  //   cart.items.map(item => {
+  //     if (card.id === item.id) {
+  //       e.target.setAttribute('disabled', 'true');
+  //       e.target.classList.remove('active-button');
+  //     }
+  //   });
+  // });
 }
