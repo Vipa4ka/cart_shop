@@ -38,6 +38,25 @@
   background-color: #fff;
   transition: 0.3s all;
 }
+
+.clear-basket {
+  display: flex;
+  margin-left: auto;
+  margin-right: 50px;
+  justify-content: center;
+  list-style-type: none;
+  width: 200px;
+  padding: 10px 15px;
+  border: none;
+  background: no-repeat url('../img/xc.svg');
+  background-size: 30px 30px;
+  justify-content: end;
+  color: #1d6c1d;
+  font-size: 18px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
 /* Стили для кнопки закрытия */
 .modal-cross {
   width: 15px;

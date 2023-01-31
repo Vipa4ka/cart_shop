@@ -7,9 +7,6 @@ refs.btnCard.forEach(elem => {
 });
 
 function onclickCard(e) {
-  // console.log(cart.items);
-  // console.log('cards', cards);
-
   e.target.setAttribute('disabled', 'true');
   e.target.classList.remove('active-button');
 
