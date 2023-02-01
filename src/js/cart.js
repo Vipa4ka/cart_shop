@@ -33,7 +33,9 @@ const cart = {
   },
 
   clear() {
-    this.items = [];
+    const { items } = this;
+    items.allTotal = 0;
+    return (this.items = []);
   },
 
   countTotalPrice() {

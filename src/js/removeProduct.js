@@ -18,7 +18,7 @@ function onClickRemove(e) {
 
   refs.btnCard.forEach(elem => {
     if (elem.parentNode.id === listProds.id) {
-      elem.disabled = 'false';
+      elem.removeAttribute('disabled');
       elem.classList.add('active-button');
     }
   });
@@ -27,10 +27,22 @@ function onClickRemove(e) {
 const clear = document.querySelector('.clear-basket');
 clear.addEventListener('click', onClickBtnClear);
 function onClickBtnClear(e) {
-  console.log('item', cart.items);
   cart.clear();
-  console.log('item', cart.items);
-  total.renderCards();
+  const list = document.querySelector('.modal-basket');
+  // list.innerHTML = '';
+  list.innerHTML = '';
+  refs.totalSum.innerHTML = 0;
+  clear.disabled = 'true';
+  clear.classList.remove('active-button');
+
+  // total.renderCards();
+  refs.btnCard.forEach(elem => {
+    console.log(elem);
+
+    elem.classList.add('active-button');
+    elem.removeAttribute('disabled');
+    // elem.disabled = 'false';
+  });
 }
 
 const removeFunctions = {

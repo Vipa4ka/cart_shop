@@ -9,7 +9,7 @@ refs.modalElem.addEventListener('click', onClickBasket);
 
 function onClickBasket(e) {
   refs.totalSum.innerHTML = cart.countTotalPrice();
-  const listCards = renderCards(cart.items);
+  const listCards = renderCards();
   const list = document.querySelector('.modal-basket');
   list.innerHTML = '';
   list.insertAdjacentHTML('afterbegin', listCards);
