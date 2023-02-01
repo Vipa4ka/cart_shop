@@ -91,31 +91,3 @@ const cart = {
 };
 
 export default cart;
-
-// console.log(nameProduct);
-// cart.add({ name: nameProduct, price: priceProduct });
-// cart.add({ name: 'apple', price: 50 });
-// cart.add({ name: 'apple', price: 50 });
-// cart.add({ name: 'apple', price: 50 });
-// cart.add({ name: 'lemon', price: 70 });
-// cart.add({ name: 'lemon', price: 70 });
-// cart.add({ name: 'cherry', price: 100 });
-// cart.add({ name: 'strawberry', price: 150 });
-// console.table(cart.items);
-// cart.remove('lemon');
-// console.table(cart.items);
-
-// console.log('total', cart.countTotalPrice());
-// cart.increaseQuantity('apple');
-// cart.increaseQuantity('apple');
-// cart.increaseQuantity('apple');
-
-// console.table(cart.items);
-
-// cart.decreaseQuantity('lemon');
-// cart.decreaseQuantity('lemon');
-// cart.decreaseQuantity('cherry');
-// console.table(cart.items);
-// console.log('total', cart.countTotalPrice());
-// cart.clear();
-// console.log(cart.items);

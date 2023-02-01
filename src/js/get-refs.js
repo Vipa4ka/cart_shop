@@ -7,12 +7,11 @@ const refs = {
   modal: document.querySelector('.modal'),
   modalBasket: document.querySelector('.modal-basket'),
   overlay: document.querySelector('#overlay-modal'),
-  // minusKg: document.querySelector('.minus'),
   plusKg: document.querySelector('.plus'),
-
   btnProgress: document.querySelector('.button-progress'),
   listCard: document.querySelector('.list-card-basket'),
   modalBtn: document.querySelector('.modal-cross'),
+  remove: document.querySelectorAll('.remove-cart'),
 };
 
 export default refs;

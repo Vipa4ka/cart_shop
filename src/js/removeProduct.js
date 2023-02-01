@@ -2,6 +2,9 @@ import refs from './get-refs';
 import cart from './cart';
 import total from './totalBasket';
 
+const clear = document.querySelector('.clear-basket');
+clear.addEventListener('click', onClickBtnClear);
+
 function onRemove() {
   const remove = document.querySelectorAll('.remove-cart');
   remove.forEach(elem => {
@@ -19,29 +22,23 @@ function onClickRemove(e) {
   refs.btnCard.forEach(elem => {
     if (elem.parentNode.id === listProds.id) {
       elem.removeAttribute('disabled');
+
       elem.classList.add('active-button');
     }
   });
 }
 
-const clear = document.querySelector('.clear-basket');
-clear.addEventListener('click', onClickBtnClear);
 function onClickBtnClear(e) {
   cart.clear();
-  const list = document.querySelector('.modal-basket');
-  // list.innerHTML = '';
-  list.innerHTML = '';
+  const modalBasket = document.querySelector('.modal-basket');
+  modalBasket.innerHTML = '';
   refs.totalSum.innerHTML = 0;
   clear.disabled = 'true';
   clear.classList.remove('active-button');
 
-  // total.renderCards();
   refs.btnCard.forEach(elem => {
-    console.log(elem);
-
     elem.classList.add('active-button');
     elem.removeAttribute('disabled');
-    // elem.disabled = 'false';
   });
 }
 

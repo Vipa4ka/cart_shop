@@ -39,7 +39,6 @@ function onClickProgress(e) {
     quantityProd.innerHTML = quantityCart;
   }
   sumProd.innerHTML = cart.amountProd(nameProd);
-
   refs.totalSum.innerHTML = cart.countTotalPrice();
 }
 
